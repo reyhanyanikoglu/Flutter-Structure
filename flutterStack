@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Stack(
+        alignment: Alignment.center,
+        children: [
+          //big box
+          Container(
+            width: 300,
+            height: 300,
+            color: Colors.deepPurple,
+          ),
+          //medium box
+          Container(
+            width: 200,
+            height: 200,
+            color: Colors.deepPurple[400],
+          ),
+          //small box
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.deepPurple[200],
+          )
+        ],
+      )
+    );
+  }
+}
